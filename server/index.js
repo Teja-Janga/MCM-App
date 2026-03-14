@@ -24,7 +24,7 @@ app.get('/', (req, res) => res.send('MCM Backend is running! 🚀'));
 app.get('/api/render/services', async(req, res) => {
     try {
         const response = await axios.get('https://api.render.com/v1/services', {
-            headers: { 'Authorization': `Bearer ${process.env.RENDER_API_Key}` }
+            headers: { 'Authorization': `Bearer ${process.env.RENDER_API_KEY}` }
         });
         res.json(response.data);
     }
