@@ -125,7 +125,7 @@ const Home = ({ isLogVisible, stats, setStats, setIsRefreshing }) => {
                                 <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">Live Stream</span>
                             </div>
                             
-                            <div className="p-4 font-mono text-sm space-y-2 max-h-[64] overflow-y-autoscrollbar-thin scrollbar-thumb-slate-700">
+                            <div className="p-4 font-mono text-sm space-y-2 max-h-60 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
                                 {incidents.map((log) => (
                                     <div key={log.id} className="flex gap-4 items-start border-b border-slate-800/50 pb-1 last:border-0">  
                                         <span className="text-slate-400 text-[11px] pt-1">{log.time}</span>
