@@ -109,7 +109,8 @@ const Home = ({ isLogVisible, stats, setStats, setIsRefreshing }) => {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 1 }}
-                        className="overflow-hidden transition-ease-9000"
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="overflow-hidden"
                     >
                         <div className="max-w-4xl mx-auto mb-4 bg-[#1e293b] rounded-xl shadow-2xl overflow-hidden border border-slate-700">
                             <div className="bg-[#0f172a] px-4 py-2 flex items-center justify-between border-b border-slate-700">
@@ -124,11 +125,9 @@ const Home = ({ isLogVisible, stats, setStats, setIsRefreshing }) => {
                                 <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">Live Stream</span>
                             </div>
                             
-                            <div className="p-4 font-mono text-sm space-y-2 max-h-[50] overflow-y-auto">
+                            <div className="p-4 font-mono text-sm space-y-2 max-h-[64] overflow-y-autoscrollbar-thin scrollbar-thumb-slate-700">
                                 {incidents.map((log) => (
-                                    <div key={log.id} className="flex gap-4 items-start border-b border-slate-800/50 pb-1 last:border-0">
-                                        
-                                        
+                                    <div key={log.id} className="flex gap-4 items-start border-b border-slate-800/50 pb-1 last:border-0">  
                                         <span className="text-slate-400 text-[11px] pt-1">{log.time}</span>
                                         <span className={`font-bold text-[10px] px-1.5 py-0.5 rounded ${
                                             log.type === 'CRITICAL' ? 'bg-red-500/20 text-red-400' :
@@ -139,7 +138,6 @@ const Home = ({ isLogVisible, stats, setStats, setIsRefreshing }) => {
                                 ))}
                             </div>
 
-                            {/* Inside your Footer or Console Log component */}
                             <div className="border-t border-slate-600 bg-[#0f172a] p-2">
                                 <div className="flex flex-wrap justify-center font-semibold gap-x-6 gap-y-1 text-[11px] font-mono">
                                     <div className="flex gap-2">
