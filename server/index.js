@@ -10,7 +10,7 @@ app.use(cors({ origin: '*' })); // Allows the React app to talk to this server
 app.use(express.json());
 
 const checkKeys = () => {
-    const keys = ['RENDER_API_Key', 'VERCEL_TOKEN', 'NETLIFY_TOKEN', 'AIVEN_TOKEN'];
+    const keys = ['RENDER_API_KEY', 'VERCEL_TOKEN', 'NETLIFY_TOKEN', 'AIVEN_TOKEN'];
     keys.forEach(key => {
         if (!process.env[key]) console.warn(`⚠️ Warning: ${key} is not defined in .env`);
     });
