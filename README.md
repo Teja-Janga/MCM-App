@@ -4,7 +4,7 @@ A real-time, full-stack dashboard designed to monitor and manage services across
 
 ---
 
-**Live Demo:** [https://mcm-app-three.vercel.app/](https://mcm-app-three.vercel.app/)
+**Live Demo:** [https://mcm-rfhpw3j0f-teja-jangas-projects.vercel.app/](https://mcm-rfhpw3j0f-teja-jangas-projects.vercel.app/)
 
 ---
 
